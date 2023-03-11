@@ -1,4 +1,6 @@
-const FormattedTime = ({ time } ) => {
+import styles from './FormattedTime.module.scss'
+
+const FormattedTime = ({ time }) => {
 
   let miliseconds, seconds, minutes, hours;
   const getTime = (duration) => {
@@ -23,7 +25,7 @@ const FormattedTime = ({ time } ) => {
 
   return (
     <div>
-      <p>{hours}:{minutes}:{seconds}.{miliseconds}</p>
+      <p className={styles.time}>{hours}:{minutes}:{seconds}.{miliseconds}</p>
     </div>
   );
 };
